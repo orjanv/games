@@ -25,8 +25,9 @@ def check_guess(guess, answer):
 
 
 # Read a question and answer from file, line by line
+# Start by listing the topic from the top of the file
 with open(QA_FILE, 'r') as file:
-    print(file.readline()) # Print the topic from first line
+    print(file.readline())
     for line in file.readlines():
         total = total + 1
         q, a= [x for x in line.strip().split(';')]
@@ -34,9 +35,9 @@ with open(QA_FILE, 'r') as file:
         check_guess(guess, a)
         print(f'Your score is {str(score)}\n')
 
-# Rate the scores
+# Once done, rate the score
 if score == total:
-    print('Awesome, you got full score')
+    print(f'Awesome, you got full score, {score} out of {total}')
 elif score > total / 2:
     print(f'Not bad, you got {score} out of {total} correct')
 elif score == 0:
