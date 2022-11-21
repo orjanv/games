@@ -1,0 +1,5 @@
+Do you know your planets?
+What is the biggest planet?;Jupiter
+What is the red planet?;Mars
+How many planets are there in our solar system?;8
+Neptun is the only planets with rings. True og False?;False
