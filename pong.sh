@@ -1,0 +1,1 @@
+boop(){(play  -q -V0 -n synth sin 400 trim 0 0.12 vol 0.5 &); };clear;cols=$(tput cols);lines=$(tput lines);x=1;y=1;xd=1;yd=1;while true;do if [[ $x == $lines || $x == 0 ]]; then boop; xd=$(( $xd *-1 )) ; fi ; if [[ $y == $cols || $y == 0 ]]; then boop; yd=$(( $yd * -1 )) ; fi ; x=$(( $x + $xd )); y=$(( $y + $yd )); printf "\33[%s;%sH" $x $y; sleep 0.05 ;done
